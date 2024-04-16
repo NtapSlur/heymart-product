@@ -10,6 +10,7 @@ ENV JDBC_DATABASE_URL ${JDBC_DATABASE_URL}
 ENV JDBC_DATABASE_USERNAME ${JDBC_DATABASE_USERNAME}
 
 WORKDIR /app
-COPY ./src/heymart/build/libs/*.jar heymart.jar
+RUN ls -al
+COPY ./heymart-product*.jar heymart.jar
 EXPOSE 8080
 CMD ["java","-jar","heymart.jar"]
