@@ -34,6 +34,7 @@ jobs:
 
       - name: Build and Test
         run: |
+          ./gradlew build
           ./gradlew check --info --stacktrace
           ./gradlew test
           ./gradlew jacocoTestReport
