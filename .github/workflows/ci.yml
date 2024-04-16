@@ -32,6 +32,9 @@ jobs:
       - name: Build with Gradle
         run: |
           ./gradlew assemble
+          ./gradlew build
+          
+          ls -al
       # (Optional) Add steps for running tests and generating reports
 
       - name: Upload Artifact
