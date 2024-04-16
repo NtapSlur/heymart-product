@@ -11,6 +11,6 @@ ENV JDBC_DATABASE_USERNAME ${JDBC_DATABASE_USERNAME}
 
 WORKDIR /app
 RUN ls -al; chmod +x gradlew; ./gradlew build; ls -al
-COPY build/libs/heymart-product-0.0.1-SNAPSHOT.jar /app
+COPY ./heymart-product-0.0.1-SNAPSHOT.jar /app
 EXPOSE 8080
-CMD ["java","-jar","heymart*.jar"]
+CMD ["java","-jar","heymart-product-0.0.1-SNAPSHOT.jar"]
