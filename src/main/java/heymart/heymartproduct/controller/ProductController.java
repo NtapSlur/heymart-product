@@ -6,9 +6,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
+@RequestMapping("")
 public class ProductController {
     @GetMapping("")
-    public String mainPage() {
+    public String mainPage(Model model) {
         return "MainPage";
     }
 }
